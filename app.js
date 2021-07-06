@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if(game){    
         document.addEventListener('keyup', control);
         // touch pad 
-        document.addEventListener('touchstart', handleTouchStart);        
-        document.addEventListener('touchmove', handleTouchMove);
+        document.addEventListener('touchstart', handleTouchStart, false);        
+        document.addEventListener('touchmove', handleTouchMove, false);
     }
 
     // touch sensing 
