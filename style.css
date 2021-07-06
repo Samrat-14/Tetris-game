@@ -10,13 +10,12 @@ body{
 }
 .text{
     margin-top: 5px;
-    padding: 5px;
     color: #eee;
     letter-spacing: 8px;
 }
 .container{
     display: flex;
-    margin-top: 5px;
+    margin: 5px 0;
     justify-content: space-between;
 }
 .taken{
@@ -110,14 +109,14 @@ body{
 
 @media (max-width: 550px){
     .header{
-        margin: 0 15px;
+        margin: 0 5px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .text{
         letter-spacing: 0;
-        margin: 10px;
+        margin: 0 2px;
     }
     .container{
         flex-direction: column-reverse;
