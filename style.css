@@ -5,7 +5,7 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-image: radial-gradient(#8bffa8, #02bb93);
+    background-image: radial-gradient(#95fcaf, #04a194);
     overflow: hidden;
 }
 .text{
@@ -16,7 +16,7 @@ body{
 }
 .container{
     display: flex;
-    padding: 20px;
+    margin-top: 5px;
     justify-content: space-between;
 }
 .taken{
@@ -58,6 +58,7 @@ body{
     text-align: center;
 }
 .box{
+    margin-left: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -109,9 +110,8 @@ body{
 
 @media (max-width: 550px){
     .header{
-        padding: 0 10px;
+        padding: 0 15px;
         display: flex;
-        flex-direction: column;
         justify-content: center;
         align-items: center;
     }
@@ -126,6 +126,7 @@ body{
     .box{
         flex-direction: row;
         justify-content: space-between;
+        margin-left: 0;
         margin-bottom: 10px;
     }
     .wrapper{

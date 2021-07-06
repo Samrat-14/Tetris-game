@@ -11,11 +11,11 @@ document.addEventListener('DOMContentLoaded', () => {
     let game = false;
     let score = 0;
     const colors = [
-        'orange',
-        'red',
-        'purple',
-        'green',
-        'blue'
+        '#fcac50',
+        '#d83c3c',
+        '#7533ac',
+        '#028117',
+        '#04507c'
     ]
 
     // The Tetrominoes
