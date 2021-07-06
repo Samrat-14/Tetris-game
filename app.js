@@ -107,42 +107,46 @@ document.addEventListener('DOMContentLoaded', () => {
     }                                                     
 
     function handleTouchStart(evt) {
-        const firstTouch = getTouches(evt)[0];                                      
-        xDown = firstTouch.clientX;                                      
-        yDown = firstTouch.clientY;                                      
+        if(game){
+            const firstTouch = getTouches(evt)[0];                                      
+            xDown = firstTouch.clientX;                                      
+            yDown = firstTouch.clientY;                                      
+        }
     };                                                
 
     function handleTouchMove(evt) {
-        if( !xDown || !yDown ) {
-            return;
-        }
+        if(game){
+            if(!xDown || !yDown) {
+                return;
+            }
 
-        var xUp = evt.touches[0].clientX;                                    
-        var yUp = evt.touches[0].clientY;
+            var xUp = evt.touches[0].clientX;                                    
+            var yUp = evt.touches[0].clientY;
 
-        var xDiff = xDown - xUp;
-        var yDiff = yDown - yUp;
+            var xDiff = xDown - xUp;
+            var yDiff = yDown - yUp;
 
-        if(Math.abs(xDiff) > Math.abs(yDiff)){ // most significant
-            if (xDiff > 0) {
-                // left swipe
-                moveLeft();
+            if(Math.abs(xDiff) > Math.abs(yDiff)){ // most significant
+                if (xDiff > 0) {
+                    // left swipe
+                    moveLeft();
+                } else {
+                    // right swipe
+                    moveRight();
+                }                       
             } else {
-                // right swipe
-                moveRight();
-            }                       
-        } else {
-            if (yDiff > 0) {
-                // up swipe 
-                rotate()
-            } else { 
-                // down swipe
-                moveDown()
-            }                                                                 
+                if (yDiff > 0) {
+                    // up swipe 
+                    rotate()
+                } else { 
+                    // down swipe
+                    moveDown()
+                }                                                                 
+            }
+            // reset values
+            xDown = null;
+            yDown = null;                                             
         }
-        // reset values
-        xDown = null;
-        yDown = null;                                             
     }
 
 
