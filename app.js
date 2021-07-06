@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
     if(game){    
         document.addEventListener('keyup', control);
         // touch pad 
-        document.addEventListener('touchstart', handleTouchStart, false);        
-        document.addEventListener('touchmove', handleTouchMove, false);
+        document.addEventListener('touchstart', handleTouchStart);        
+        document.addEventListener('touchmove', handleTouchMove);
     }
 
     // touch sensing 
@@ -107,46 +107,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }                                                     
 
     function handleTouchStart(evt) {
-        if(game){
-            const firstTouch = getTouches(evt)[0];                                      
-            xDown = firstTouch.clientX;                                      
-            yDown = firstTouch.clientY;                                      
-        }
+        const firstTouch = getTouches(evt)[0];                                      
+        xDown = firstTouch.clientX;                                      
+        yDown = firstTouch.clientY;
     };                                                
 
     function handleTouchMove(evt) {
-        if(game){
-            if(!xDown || !yDown) {
-                return;
-            }
-
-            var xUp = evt.touches[0].clientX;                                    
-            var yUp = evt.touches[0].clientY;
-
-            var xDiff = xDown - xUp;
-            var yDiff = yDown - yUp;
-
-            if(Math.abs(xDiff) > Math.abs(yDiff)){ // most significant
-                if (xDiff > 0) {
-                    // left swipe
-                    moveLeft();
-                } else {
-                    // right swipe
-                    moveRight();
-                }                       
-            } else {
-                if (yDiff > 0) {
-                    // up swipe 
-                    rotate()
-                } else { 
-                    // down swipe
-                    moveDown()
-                }                                                                 
-            }
-            // reset values
-            xDown = null;
-            yDown = null;                                             
+        if(!xDown || !yDown) {
+            return;
         }
+
+        var xUp = evt.touches[0].clientX;                                    
+        var yUp = evt.touches[0].clientY;
+
+        var xDiff = xDown - xUp;
+        var yDiff = yDown - yUp;
+
+        if(Math.abs(xDiff) > Math.abs(yDiff)){ // most significant
+            if (xDiff > 0) {
+                // left swipe
+                moveLeft();
+            } else {
+                // right swipe
+                moveRight();
+            }                       
+        } else {
+            if (yDiff > 0) {
+                // up swipe 
+                rotate()
+            } else { 
+                // down swipe
+                moveDown()
+            }                                                                 
+        }
+        // reset values
+        xDown = null;
+        yDown = null; 
     }
 
 
