@@ -7,7 +7,6 @@ body{
     justify-content: center;
     align-items: center;
     background-image: radial-gradient(#95fcaf, #04a194);
-    overscroll-behavior-y: none;
 }
 .text{
     margin-top: 5px;
@@ -20,9 +19,27 @@ body{
     justify-content: space-between;
 }
 .taken{
-    background: #01c594;
+    background: #009670;
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 1),
                 inset -2px -2px 2px rgba(0, 0, 0, 1);
+}
+.taken::before{
+    content: '';
+    position: absolute;
+    margin: 4px;
+    width: 2px;
+    height: 6px;
+    background-color: #ddd;
+    box-shadow: 0 0 1px #ddd;
+}
+.taken::after{
+    content: '';
+    position: absolute;
+    margin: 4px;
+    width: 5px;
+    height: 2px;
+    background-color: #ddd;
+    box-shadow: 0 0 1px #ddd;
 }
 
 .grid{
@@ -38,6 +55,24 @@ body{
 .tetromino{
     box-shadow: inset 2px 2px 2px rgba(255, 255, 255, 1),
                 inset -2px -2px 2px rgba(0, 0, 0, 1);
+}
+.tetromino::before{
+    content: '';
+    position: absolute;
+    margin: 4px;
+    width: 2px;
+    height: 6px;
+    background-color: #ddd;
+    box-shadow: 0 0 1px #ddd;
+}
+.tetromino::after{
+    content: '';
+    position: absolute;
+    margin: 4px;
+    width: 5px;
+    height: 2px;
+    background-color: #ddd;
+    box-shadow: 0 0 1px #ddd;
 }
 
 .mini-grid{
