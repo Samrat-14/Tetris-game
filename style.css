@@ -4,9 +4,9 @@ body{
     font-family: 'Otomanopee One', sans-serif;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-image: radial-gradient(#95fcaf, #04a194);
-    overflow: hidden;
 }
 .text{
     margin-top: 5px;
@@ -110,13 +110,14 @@ body{
 
 @media (max-width: 550px){
     .header{
-        padding: 0 15px;
+        margin: 0 15px;
         display: flex;
         justify-content: center;
         align-items: center;
     }
     .text{
-        padding: 0;
+        letter-spacing: 0;
+        margin: 10px;
     }
     .container{
         flex-direction: column-reverse;
@@ -127,7 +128,7 @@ body{
         flex-direction: row;
         justify-content: space-between;
         margin-left: 0;
-        margin-bottom: 10px;
+        margin-bottom: 5px;
     }
     .wrapper{
         flex-direction: row;
@@ -140,9 +141,6 @@ body{
         flex-direction: column;
         justify-content: center;
         align-items: center;
-    }
-    .buttons{
-        margin: 2px;
     }
 }
 
