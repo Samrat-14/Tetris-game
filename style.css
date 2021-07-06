@@ -109,6 +109,13 @@ body{
 }
 
 @media (max-width: 550px){
+    .header{
+        padding: 0 10px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        letter-spacing: 2px;
+    }
     .text{
         padding: 0;
     }
@@ -120,7 +127,7 @@ body{
     .box{
         flex-direction: row;
         justify-content: space-between;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     .wrapper{
         flex-direction: row;
@@ -135,7 +142,7 @@ body{
         align-items: center;
     }
     .buttons{
-        margin: 5px;
+        margin: 2px;
     }
 }
 
