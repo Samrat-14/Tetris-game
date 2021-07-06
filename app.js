@@ -81,24 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // assign functions to keycode
     function control(e){
-        if(game){
-            if(e.keyCode === 37){
-                moveLeft();
-            } else if(e.keyCode === 38){
-                rotate();
-            } else if(e.keyCode === 39){
-                moveRight();
-            } else if(e.keyCode === 40){
-                moveDown();
-            }
+        if(e.keyCode === 37){
+            moveLeft();
+        } else if(e.keyCode === 38){
+            rotate();
+        } else if(e.keyCode === 39){
+            moveRight();
+        } else if(e.keyCode === 40){
+            moveDown();
         }
     }
-    document.addEventListener('keyup', control);
+    if(game){    
+        document.addEventListener('keyup', control);
+        // touch pad 
+        document.addEventListener('touchstart', handleTouchStart, false);        
+        document.addEventListener('touchmove', handleTouchMove, false);
+    }
 
-    // touch pad 
-    document.addEventListener('touchstart', handleTouchStart, false);        
-    document.addEventListener('touchmove', handleTouchMove, false);
-
+    // touch sensing 
     var xDown = null;                                                        
     var yDown = null;
 
