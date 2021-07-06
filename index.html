@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tetris Game</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="shortcut icon" href="./favicon.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Otomanopee+One&family=Roboto:wght@300&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="text">WELCOME TO</div>
+    <div class="text" style="font-size: 45px; font-weight: 800; letter-spacing: 10px; color: #fafafa;">TETRIS</div>
+
+    <div class="container">
+        <div class="grid">
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div></div> <div></div> <div></div> <div></div> <div></div>
+            <div class="taken"></div> <div class="taken"></div>
+            <div class="taken"></div> <div class="taken"></div>
+            <div class="taken"></div> <div class="taken"></div>
+            <div class="taken"></div> <div class="taken"></div>
+            <div class="taken"></div> <div class="taken"></div>
+        </div>
+
+        <div class="box">
+            <div class="wrapper">
+                <div class="score-wrapper">
+                    <h3 class="score-text">YOUR SCORE</h3>
+                    <span id="score" class="score-text" style="font-size: 60px; color: #9e8d2d; margin-bottom: 20px;">0</span>
+                </div>
+
+                <div class="other-wrapper">
+                    <div class="game-over">GAME OVER</div>
+                    <div class="mini-grid">
+                        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+                        <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div> <div></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <div class="button-wrapper"><button id="restart-button" class="button">Start</button></div>
+                <div class="button-wrapper" id="pause-resume"><button id="start-button" class="button">Pause</button></div>
+            </div>
+        </div>
+            
+    </div>
+
+    <script src="./app.js"></script>
+</body>
+</html>
