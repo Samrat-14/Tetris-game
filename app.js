@@ -81,24 +81,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // assign functions to keycode
     function control(e){
-        if(e.keyCode === 37){
-            moveLeft();
-        } else if(e.keyCode === 38){
-            rotate();
-        } else if(e.keyCode === 39){
-            moveRight();
-        } else if(e.keyCode === 40){
-            moveDown();
+        if(game){
+            if(e.keyCode === 37){
+                moveLeft();
+            } else if(e.keyCode === 38){
+                rotate();
+            } else if(e.keyCode === 39){
+                moveRight();
+            } else if(e.keyCode === 40){
+                moveDown();
+            }
         }
     }
-    if(game){    
-        document.addEventListener('keyup', control);
-        // touch pad 
-        document.addEventListener('touchstart', handleTouchStart, false);        
-        document.addEventListener('touchmove', handleTouchMove, false);
-    }
+    document.addEventListener('keyup', control);
 
-    // touch sensing 
+    // touch pad 
+    document.addEventListener('touchstart', handleTouchStart, false);        
+    document.addEventListener('touchmove', handleTouchMove, false);
+
     var xDown = null;                                                        
     var yDown = null;
 
@@ -109,11 +109,11 @@ document.addEventListener('DOMContentLoaded', () => {
     function handleTouchStart(evt) {
         const firstTouch = getTouches(evt)[0];                                      
         xDown = firstTouch.clientX;                                      
-        yDown = firstTouch.clientY;
+        yDown = firstTouch.clientY;                                      
     };                                                
 
     function handleTouchMove(evt) {
-        if(!xDown || !yDown) {
+        if( !xDown || !yDown ) {
             return;
         }
 
@@ -126,23 +126,23 @@ document.addEventListener('DOMContentLoaded', () => {
         if(Math.abs(xDiff) > Math.abs(yDiff)){ // most significant
             if (xDiff > 0) {
                 // left swipe
-                moveLeft();
+                if(game) moveLeft();
             } else {
                 // right swipe
-                moveRight();
+                if(game) moveRight();
             }                       
         } else {
             if (yDiff > 0) {
                 // up swipe 
-                rotate()
+                if(game) rotate()
             } else { 
                 // down swipe
-                moveDown()
+                if(game) moveDown()
             }                                                                 
         }
         // reset values
         xDown = null;
-        yDown = null; 
+        yDown = null;                                             
     }
 
 
