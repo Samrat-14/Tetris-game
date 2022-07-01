@@ -1,6 +1,6 @@
 # Tetris Game
 
-Tetris game made in simple vanilla javascript.
+A Tetris Game made with vanilla javascript with added touchevents feature for sensing touch swipes in android or any other mobile devices.
 
 ![Tetris_screenshot](preview.png)
 
